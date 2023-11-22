@@ -1,0 +1,241 @@
+{
+	"info": {
+		"_postman_id": "45f3e5f6-3a9d-42f3-869c-d60629668edc",
+		"name": "Проверка фильтрации Дом питомца",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25593012"
+	},
+	"item": [
+		{
+			"name": "Попугай_корелла",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,nl;q=0.6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/app/pets/?species_name=parrot&breed-code=cockatiel",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"app",
+						"pets",
+						""
+					],
+					"query": [
+						{
+							"key": "species_name",
+							"value": "parrot"
+						},
+						{
+							"key": "breed-code",
+							"value": "cockatiel"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Попугай_индийский_М_1",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,nl;q=0.6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/app/pets/?species_name=parrot&breed-code=indian&gender_code=m&age=1",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"app",
+						"pets",
+						""
+					],
+					"query": [
+						{
+							"key": "species_name",
+							"value": "parrot"
+						},
+						{
+							"key": "breed-code",
+							"value": "indian"
+						},
+						{
+							"key": "gender_code",
+							"value": "m"
+						},
+						{
+							"key": "age",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Питбуль_0",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,nl;q=0.6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/app/pets/?breed-code=pitbull&age=0",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"app",
+						"pets",
+						""
+					],
+					"query": [
+						{
+							"key": "breed-code",
+							"value": "pitbull"
+						},
+						{
+							"key": "age",
+							"value": "0"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Немецкая овчарка_Ж_2",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"    });\r",
+							"    "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept-Language",
+						"value": "ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7,nl;q=0.6",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{baseURL}}/app/pets/?breed-code=german_shepherd&age=2&gender-code=f",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"app",
+						"pets",
+						""
+					],
+					"query": [
+						{
+							"key": "breed-code",
+							"value": "german_shepherd"
+						},
+						{
+							"key": "age",
+							"value": "2"
+						},
+						{
+							"key": "gender-code",
+							"value": "f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://158.160.56.133/"
+		}
+	]
+}
